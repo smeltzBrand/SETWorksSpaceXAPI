@@ -16,10 +16,10 @@ Each payload had it's own Id instead of just the mass_kg, so I also consumed the
 
 The time is converted using methods from the TimeZoneInfo class.
 
-Surprising, the OrderByDesc LINQ worked well for sorting the list by LaunchDate.
+Surprisingly, the OrderByDesc LINQ worked well for sorting the list by LaunchDate.
 
-At times the Payload was null, which I really can't imagine, but regardless I decided to still rank the Payload and put a zero in place of the null.
-However, the "0" is not displayed on the table in reference to its original null value.
+At times the Payload was documented as null, which I really can't imagine, but regardless I decided to still rank the null Payloads and put a zero in place of the null.
+However, the "0" is not displayed on the table in reference to its original null value. I made the mistake of creating a huge JSON object by "Paste as JSON" which ended up causing lots of grief by trying to figure out which values to make nullable. Limited properties for each JSON object class did the trick.
 
 I used the DataTables CDN, a JQuery CDN, a Bootstrap CDN and small JS script. The JS disables the sorting function available, which unfortunately also disables
 the pagination and search features in turn.
